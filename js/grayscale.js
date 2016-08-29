@@ -14,7 +14,10 @@ function collapseNavbar() {
 }
 
 $(window).scroll(collapseNavbar);
-$(document).ready(collapseNavbar);
+$(document).ready(function(){
+	collapseNavbar();
+	$('[data-toggle="popover"]').popover({ trigger: "hover" });
+});
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
